@@ -15,16 +15,21 @@
 
 ### Phase 2 — Diary Compiler + UI ✅
 - [x] DiaryEntry model with migration support (auto-created on startup)
-- [x] Diary compiler pipeline (transcribe via Bedrock → compile via Claude)
+- [x] Diary compiler pipeline (transcribe → compile via Claude)
 - [x] Entries API (list, get by date, compile, delete with un-compile)
-- [x] Scheduled daily compilation via APScheduler (configurable time)
+- [x] Recompile support (`force=true` deletes entry and re-transcribes)
+- [x] Scheduled daily compilation via APScheduler (configurable time, default 03:00)
 - [x] Frontend: Today/Diary nav tabs
 - [x] Frontend: Compile button with spinner status
 - [x] Frontend: Diary entry rendered as markdown below timeline
 - [x] Frontend: Compiled badge on recording cards
 - [x] Frontend: Diary list view with pagination and click-to-navigate
 - [x] Docker Compose updated with AWS/Bedrock env vars
-- [x] Requirements updated (boto3, apscheduler)
+- [x] Dual transcription backends: local Whisper (default) or AWS Transcribe
+- [x] Audio auth via query parameter (`?key=`) for HTML audio elements
+- [x] Magic byte detection for audio format (WebM vs OGG)
+- [x] HTTPS via Nginx TLS sidecar (mkcert certs)
+- [x] Requirements updated (boto3, apscheduler, faster-whisper)
 
 ### Blocked
 _Nothing currently blocked._
