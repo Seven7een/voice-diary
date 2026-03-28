@@ -1,0 +1,8 @@
+# gitleaks configuration
+# https://github.com/gitleaks/gitleaks
+
+[extend]
+# Uses the default gitleaks rules
+
+[extend.allowlist]
+paths = ['''\.gitleaks\.toml$''', '''\.env\.example$''']
